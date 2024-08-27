@@ -4,6 +4,8 @@
 
   <h1>Todo List</h1>
   <a class="new-task" href="/todos/create">タスクを追加する</a>
+
+  
   <table>
     <thead>
       <tr>
