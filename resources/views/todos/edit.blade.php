@@ -1,9 +1,9 @@
+
+<head>
+  <link rel="stylesheet" href="{{ asset('css/todo.css') }}">
+</head>
+
 <div class="container">
   <h1>タスクの編集</h1>
-  <form method="POST" action="/todos/{{ $todo->id }}">
-    @csrf
-    @method('PUT')
-    <input type="text" name="title" value="{{ $todo->title }}" required>
-    <input type="submit" value="保存する">
-  </form>
+  <x-todo-form :action="route('todos.update', $todo->id)" method="PUT" :todo="$todo" />
 </div>

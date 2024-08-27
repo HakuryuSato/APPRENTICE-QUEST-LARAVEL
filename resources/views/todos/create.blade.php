@@ -1,8 +1,4 @@
 <div class="container">
-  <h1>タスクの追加</h1>
-  <form method="POST" action="/todos">
-    @csrf
-    <input type="text" name="title" placeholder="タスクを入力する" required>
-    <input type="submit" value="保存する">
-  </form>
+    <h1>新規タスクの作成</h1>
+    <x-todo-form :action="route('todos.store')" />
 </div>
